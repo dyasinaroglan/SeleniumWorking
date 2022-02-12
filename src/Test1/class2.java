@@ -1,3 +1,5 @@
+package Test1;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -6,7 +8,7 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 public class class2 {
     public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "C:\\SELENIUM\\chromeDriver\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new ChromeDriver();  //driver oluşturuyoruz
         driver.get("https://login.yahoo.com/");
         driver.manage().window().maximize();
         Thread.sleep(2000);
