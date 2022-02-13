@@ -27,7 +27,7 @@ public class Class1 {
         4.LinkText    (bağlantı linki)
         5.partialLinkText kısmi bağlantı linki)
         6.tagName  (etiket adı)
-        7.cssSelector  todo tagAdı[@özellikAdı ='deger']
+        7.cssSelector
         8.xpath
          */
 

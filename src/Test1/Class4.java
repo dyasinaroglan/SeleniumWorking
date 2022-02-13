@@ -2,6 +2,7 @@ package Test1;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Class4 {
@@ -14,15 +15,31 @@ public class Class4 {
 
         driver.findElement(By.id("userName")).sendKeys("asdjasdskdj");
 
-        driver.findElement(By.cssSelector("input.mr-sm-2[placeholder=\"name@example.com\"]")).click();
-        driver.findElement(By.cssSelector("input.mr-sm-2[placeholder=\"name@example.com\"]")).sendKeys("yasinargln@gmail.com");
-        driver.findElement(By.cssSelector(".form-control[placeholder='Current Address']")).sendKeys("istanbul türkiye");
+        WebElement nameText = driver.findElement(new By.ByCssSelector("input.mr-sm-2[placeholder=\"name@example.com\"]"));
+        nameText.click();
+        WebElement emailText = driver.findElement(new By.ByCssSelector("input.mr-sm-2[placeholder=\"name@example.com\"]"));
+        emailText.sendKeys("yasinargln@gmail.com");
+        WebElement adressText = driver.findElement(new By.ByCssSelector(".form-control[placeholder='Current Address']"));
+        adressText.sendKeys("istanbul türkiye");
 
-        driver.findElement(By.cssSelector(".form-control[placeholder='Current Address']")).sendKeys("ASDSDSADMSADMSADSDMSD");
-        driver.findElement(By.id("permanentAddress")).sendKeys("AHAHAHAHHAHAHA");
-        driver.findElement(By.cssSelector(".form-control[id='permanentAddress']")).sendKeys("BU ŞEKİLDE DE YAPILABİLİR");
+        WebElement currentAdressText = driver.findElement(new By.ByCssSelector(".form-control[placeholder='Current Address']"));
+        currentAdressText.sendKeys("ASDSDSADMSADMSADSDMSD");
 
-        driver.findElement(By.id("submit")).click();
+        WebElement permanentAdressText = driver.findElement(new By.ByCssSelector(".form-control[id='permanentAddress']"));
+        permanentAdressText.sendKeys("BU ŞEKİLDE DE YAPILABİLİR");
+
+        driver.findElement(By.xpath("//div/button[@id='submit']")).click();
+
+        WebElement strnameText = driver.findElement(By.xpath("//div/p[@id='name']"));
+        String name = strnameText.getText();
+        System.out.println(name);
+
+        WebElement strEmailText = driver.findElement(By.xpath("//div/p[@id='email']"));
+        String email = strEmailText.getText();
+        System.out.println(email);
+
+
+
 
 
     }

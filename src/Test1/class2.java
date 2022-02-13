@@ -8,9 +8,10 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 public class class2 {
     public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "C:\\SELENIUM\\chromeDriver\\chromedriver.exe");
+        //setProperty-->hang, aracın test edileceğini belirlemek.sistem özelliklerini tanımlamak
         WebDriver driver = new ChromeDriver();  //driver oluşturuyoruz
         driver.get("https://login.yahoo.com/");
-        driver.manage().window().maximize();
+        driver.manage().window().maximize(); //driveri yönet pencereyi aç ve maksimize et
         Thread.sleep(2000);
         Thread.sleep(2000);
         driver.findElement(By.id("createacc")).click();
