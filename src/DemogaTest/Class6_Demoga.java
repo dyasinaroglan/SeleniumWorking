@@ -29,5 +29,8 @@ public class Class6_Demoga {
         WebElement rightClickMessage = driver.findElement(By.id("rightClickMessage"));
         String message2 = rightClickMessage.getText();
         System.out.println(message2);
+
+        WebElement clickMe = driver.findElement(By.xpath("//div/button[starts-with(text(), 'Click Me')]"));
+        clickMe.click();
     }
 }
