@@ -1,11 +1,11 @@
-package Test1;
+package DemogaTest.Test1;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Class4 {
+public class Class2_Demoga {
     public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver","C:\\SELENIUM\\chromeDriver\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();

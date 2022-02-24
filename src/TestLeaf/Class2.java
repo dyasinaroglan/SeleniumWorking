@@ -19,7 +19,7 @@ public class Class2 extends BaseStaticDriver {
                                                                                  // 2--Appium
                                                                                  // 3--UFT/QTP
                                                                                  // 4--LoadRunner
-        select.selectByIndex(1);  //index'ını yazarak int deger olarak
+        select.selectByIndex(0);  //index'ını yazarak int deger olarak
         driver.quit();
 
 

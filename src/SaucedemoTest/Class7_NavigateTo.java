@@ -39,7 +39,5 @@ public class Class7_NavigateTo extends BaseStaticDriver {
         driver.quit();
 
 
-
-
     }
 }

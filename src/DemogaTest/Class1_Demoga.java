@@ -1,14 +1,14 @@
-package Test1;
+package DemogaTest;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class class3 {
+public class Class1_Demoga {
     public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "C:\\SELENIUM\\chromeDriver\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        driver.get("https://demoqa.com/automation-practice-form");
+        driver.get("x");
         driver.manage().window().maximize();
 
         driver.findElement(By.id("firstName")).sendKeys("AHMET");

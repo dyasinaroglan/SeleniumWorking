@@ -1,12 +1,12 @@
-package Test1;
+package PhpTravelTest;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Class7 {
-    public static void main(String[] args) {
+public class Class7_PhptravelsNet {
+    public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver","C:\\SELENIUM\\chromeDriver\\chromedriver.exe");
 
         WebDriver driver = new ChromeDriver();
@@ -36,6 +36,16 @@ public class Class7 {
 
         WebElement phone = driver.findElement(By.xpath("//div/i[@class='la la-phone']"));
         phone.isEnabled();
+        WebElement phone1 = driver.findElement(By.cssSelector("div.info-icon.flex-shrink-0.bg-rgb.text-color-2"));
+        Thread.sleep(3000);
+        phone1.click();
+
+
+
+
+
+
+
 
 
 

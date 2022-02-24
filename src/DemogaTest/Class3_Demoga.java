@@ -1,14 +1,11 @@
-package Test1;
+package DemogaTest.Test1;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.List;
-
-public class Class5 {
+public class Class3_Demoga {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver","C:\\SELENIUM\\chromeDriver\\chromedriver.exe");
 
@@ -16,7 +13,7 @@ public class Class5 {
         driver.get("https://demoqa.com/checkbox");
         driver.manage().window().maximize();
 
-        String homeCheckBoxCssValue = "label[for='tree-node-home'] span.rct-checkbox svg";
+        String homeCheckBoxCssValue = "svg[class='rct-icon rct-icon-uncheck']";   //label[for='tree-node-home'] span.rct-checkbox svg
 
         WebElement homeCheckBox = driver.findElement(new By.ByCssSelector(homeCheckBoxCssValue));
         homeCheckBox.click();  //checkBox un içine tıkladı.

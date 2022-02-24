@@ -15,7 +15,7 @@ public class SaucedemoTest extends BaseStaticDriver {
          * https://www.saucedemo.com/  siteye git
          * Bütün ürünleri sepete ekle
          * Sepete git
-         * Sepetteki ürünleri önceki ürünlerle kiyasla
+         * Sepetteki ürünleri önceki ürünlerle kiyasla--isimleri ve fiyatları kıyasla
          * dogruysa Checkout butonuna tikla
          * Cikan formu doldur
          * Continue butonuna tikla
@@ -37,11 +37,12 @@ public class SaucedemoTest extends BaseStaticDriver {
         List<WebElement> ısımList = driver.findElements(By.xpath("//div[@class='inventory_item_name']")); //6 tane var. ürün ismi
         // TODO: 22.02.2022  WebElement için liste oluşturduk 
         ArrayList<String> urunIsımLıstesi = new ArrayList<>();
-        // TODO: 22.02.2022 arrayList oluşturmamızın sebebi ürünlerin isimlerini ve fiyatlarının getText lerini almak için
+        // TODO: 22.02.2022 arrayList oluşturmamızın sebebi ürünlerin isimlerini ve fiyatlarının getText lerini ArrayList in içine atmak için
         for (WebElement s : ısımList) {
             urunIsımLıstesi.add(s.getText());
         }
         System.out.println(urunIsımLıstesi);
+        // TODO: 22.02.2022 ------------------------------------------------------------------------------- 
         List<WebElement> priceList = driver.findElements(By.xpath("//div[@class='inventory_item_price']"));
         ArrayList<String> urunFıyatListesi = new ArrayList<>();
         for (WebElement p : priceList) {
@@ -51,10 +52,10 @@ public class SaucedemoTest extends BaseStaticDriver {
 
         List<WebElement> addToCart = driver.findElements(By.xpath("//button[text()='Add to cart']"));
         for (WebElement webElement : addToCart) {
-            webElement.click();
+            webElement.click(); // TODO: 22.02.2022 6 tane ürün var hepsini tıklıyoruz.yani hepsini sepete ekliyoruz 
         }
         WebElement sepet = driver.findElement(By.xpath("//a[@class='shopping_cart_link']"));
-        sepet.click();
+        sepet.click();  // TODO: 22.02.2022 sepete tıklıyoruz ve sepetin içine geliyoruz 
 
         List<WebElement> isimListesiKrsılastırma = driver.findElements(By.xpath("//div[@class='inventory_item_name']"));
         List<String> urunIsımListesi1 = elementToString(isimListesiKrsılastırma);
@@ -101,8 +102,8 @@ public class SaucedemoTest extends BaseStaticDriver {
     }
     public static List<String> elementToString(List<WebElement> list){
         List<String> textList = new ArrayList<>();
-        for (WebElement webElement : list) {
-            textList.add(webElement.getText());
+        for (WebElement i : list) {
+            textList.add(i.getText());  //textList adında parametresi List olan ve WebElement değiskeni alan bir method oluşturduk
         }
         return textList;
     }
@@ -117,5 +118,6 @@ public class SaucedemoTest extends BaseStaticDriver {
         String rakamText = text.replaceAll("[$]","");
         Double sayı = Double.parseDouble(rakamText);
         return sayı;
+
     }
 }

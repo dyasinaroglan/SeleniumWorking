@@ -1,11 +1,10 @@
-package Test1;
+package YahooTest;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
 
-public class class2 {
+public class Class2_Yahoo {
     public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "C:\\SELENIUM\\chromeDriver\\chromedriver.exe");
         //setProperty-->hang, aracın test edileceğini belirlemek.sistem özelliklerini tanımlamak

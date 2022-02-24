@@ -16,6 +16,7 @@ public class Class6_Demoga {
         WebElement doubleClickMe = driver.findElement(By.id("doubleClickBtn"));
         Actions actions = new Actions(driver); //Actions class ı WebDriver sınıfından bir değişken almalı.
         actions.doubleClick(doubleClickMe).perform();
+        //doubleClickMe---çift tıklayacağımız buton
 
         WebElement message = driver.findElement(By.id("doubleClickMessage"));
         String textMessage =message.getText();
@@ -32,5 +33,6 @@ public class Class6_Demoga {
 
         WebElement clickMe = driver.findElement(By.xpath("//div/button[starts-with(text(), 'Click Me')]"));
         clickMe.click();
+        driver.quit();
     }
 }
