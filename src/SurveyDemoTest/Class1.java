@@ -68,7 +68,7 @@ public class Class1 extends BaseStaticDriver {
         XYZweek1.click();
 
         WebElement message1 = driver.findElement(By.cssSelector("textarea[id='u_Dsr_89597']"));
-        message1.sendKeys("bu bir selenium testidir.");
+        message1    .sendKeys("bu bir selenium testidir.");
 
         Thread.sleep(2000);
         driver.quit();
