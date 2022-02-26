@@ -73,11 +73,15 @@ public class Class3 extends BaseStaticDriver {
         Thread.sleep(1000);
         WebElement kacSaat = driver.findElement(By.id("label_input_14_2"));
         kacSaat.click();
-        Thread.sleep(1000);
-        List<WebElement> yetenek = driver.findElements(By.id("label_input_15"));
+        Thread.sleep(3000);
+
+        List<WebElement> yetenek = driver.findElements(By.id("label[for^='input_15_']"));
         for (WebElement i : yetenek) {
             i.click();
         }
+        Thread.sleep(1000);
+        WebElement other2=driver.findElement(By.id("label_other_15"));
+        other2.click();
 
         JavascriptExecutor js1 = (JavascriptExecutor) driver;
         js1.executeScript("window.scrollBy(0,400)");
