@@ -7,7 +7,7 @@ import utils.BaseStaticDriver;
 public class Class1 extends BaseStaticDriver {
     public static void main(String[] args) throws InterruptedException {
         driver.get("https://demoqa.com/accordian");
-        WebElement firsCard = driver.findElement(By.xpath("//div[@class='card'][1]/div[2]"));
+        WebElement firsCard = driver.findElement(By.xpath("//div[@class='card'][1]/div[1]"));
         String className = firsCard.getAttribute("class");
         System.out.println(className);
         driver.findElement(By.id("section1Heading")).click();
@@ -17,6 +17,8 @@ public class Class1 extends BaseStaticDriver {
         Thread.sleep(1000);
         className = firsCard.getAttribute("class");
         System.out.println(className);
+
+        driver.quit();
 
     }
 }
