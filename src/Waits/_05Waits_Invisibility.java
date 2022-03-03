@@ -28,7 +28,7 @@ public class _05Waits_Invisibility extends BaseStaticDriver {
 
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
         boolean loading = wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("(//div[@style='display: none;'])[1]")));
-        // TODO: 3.03.2022 invisibility boolean değişkenine alınabiliyor. 
+        // TODO: 3.03.2022 invisibility boolean değişkenine alınabiliyor.
         System.out.println("loading : " + loading);
 
         WebElement message = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("p#message")));
