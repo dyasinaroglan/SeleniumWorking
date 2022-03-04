@@ -1,4 +1,4 @@
-package Scroll;
+package WindowHandles;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -8,7 +8,7 @@ import java.time.Duration;
 import java.util.List;
 import java.util.Set;
 
-public class _04OpenWindow extends BaseStaticDriver {
+public class _01OpenWindow extends BaseStaticDriver {
     public static void main(String[] args) {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));

@@ -1,4 +1,4 @@
-package Scroll;
+package WindowHandles;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -7,7 +7,7 @@ import utils.BaseStaticDriver;
 import java.time.Duration;
 import java.util.Set;
 
-public class _05SwitchTheWindow extends BaseStaticDriver {
+public class _02SwitchTheWindow extends BaseStaticDriver {
     public static void main(String[] args) throws InterruptedException {
         /*
         https://www.selenium.dev/ bu sayfaya gidiniz

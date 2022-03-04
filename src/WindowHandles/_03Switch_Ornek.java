@@ -1,4 +1,4 @@
-package Scroll;
+package WindowHandles;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -8,7 +8,7 @@ import utils.BaseStaticDriver;
 import java.time.Duration;
 import java.util.Set;
 
-public class _06Switch_Ornek extends BaseStaticDriver {
+public class _03Switch_Ornek extends BaseStaticDriver {
     public static void main(String[] args) throws InterruptedException {
         /*
     https://www.amazon.com.tr/  siteye gidiniz
