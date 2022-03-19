@@ -21,14 +21,16 @@ public class BaseStaticDriver {
     public static WebDriverWait wait;
     private static File srcFile;
 
-    static {
-        System.setProperty("webdriver.chrome.driver","C:\\SELENIUM\\chromeDriver\\chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
+ static {
+     System.setProperty("webdriver.chrome.driver", "C:\\SELENIUM\\Drivers\\chromeDriver\\chromedriver.exe");
+     driver = new ChromeDriver();
+     driver.manage().window().maximize();
 
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+     wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+ }
 
-    }
+
+
     public static void sleep(long milis) throws InterruptedException {
         try {
             Thread.sleep(milis);
